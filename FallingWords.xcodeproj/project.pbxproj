@@ -13,6 +13,11 @@
 		20D1A07D22C4E2C300BE23AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A07C22C4E2C300BE23AA /* Assets.xcassets */; };
 		20D1A08022C4E2C300BE23AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A07E22C4E2C300BE23AA /* LaunchScreen.storyboard */; };
 		20D1A08B22C4E2C300BE23AA /* FallingWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */; };
+		20D1A0A422C4E87400BE23AA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A322C4E87400BE23AA /* Word.swift */; };
+		20D1A0A622C4E8D800BE23AA /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A522C4E8D800BE23AA /* WordStore.swift */; };
+		20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */; };
+		20D1A0AC22C4EE3500BE23AA /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A0AB22C4EE3500BE23AA /* words.json */; };
+		20D1A0B022C4EE8100BE23AA /* test_words.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A0AF22C4EE8100BE23AA /* test_words.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		20D1A08622C4E2C300BE23AA /* FallingWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FallingWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsTests.swift; sourceTree = "<group>"; };
 		20D1A08C22C4E2C300BE23AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D1A0A322C4E87400BE23AA /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		20D1A0A522C4E8D800BE23AA /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
+		20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStoreTests.swift; sourceTree = "<group>"; };
+		20D1A0AB22C4EE3500BE23AA /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		20D1A0AF22C4EE8100BE23AA /* test_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_words.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,8 @@
 		20D1A08922C4E2C300BE23AA /* FallingWordsTests */ = {
 			isa = PBXGroup;
 			children = (
+				20D1A0AA22C4ED9700BE23AA /* TestData */,
+				20D1A0A722C4ED1F00BE23AA /* WordStoreTests */,
 				20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */,
 				20D1A08C22C4E2C300BE23AA /* Info.plist */,
 			);
@@ -106,7 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				20D1A0A022C4E7D800BE23AA /* AppDelegate */,
+				20D1A0A222C4E85E00BE23AA /* Models */,
 				20D1A09B22C4E75F00BE23AA /* ViewControllers */,
+				20D1A0A122C4E84200BE23AA /* WordStore */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -132,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				20D1A07C22C4E2C300BE23AA /* Assets.xcassets */,
+				20D1A0AB22C4EE3500BE23AA /* words.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -142,6 +157,38 @@
 				20D1A07522C4E2C100BE23AA /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		20D1A0A122C4E84200BE23AA /* WordStore */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0A522C4E8D800BE23AA /* WordStore.swift */,
+			);
+			path = WordStore;
+			sourceTree = "<group>";
+		};
+		20D1A0A222C4E85E00BE23AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0A322C4E87400BE23AA /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20D1A0A722C4ED1F00BE23AA /* WordStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */,
+			);
+			path = WordStoreTests;
+			sourceTree = "<group>";
+		};
+		20D1A0AA22C4ED9700BE23AA /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0AF22C4EE8100BE23AA /* test_words.json */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D1A08022C4E2C300BE23AA /* LaunchScreen.storyboard in Resources */,
+				20D1A0AC22C4EE3500BE23AA /* words.json in Resources */,
 				20D1A07D22C4E2C300BE23AA /* Assets.xcassets in Resources */,
 				20D1A07B22C4E2C100BE23AA /* Main.storyboard in Resources */,
 			);
@@ -235,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D1A0B022C4EE8100BE23AA /* test_words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +296,8 @@
 			files = (
 				20D1A07822C4E2C100BE23AA /* ViewController.swift in Sources */,
 				20D1A07622C4E2C100BE23AA /* AppDelegate.swift in Sources */,
+				20D1A0A422C4E87400BE23AA /* Word.swift in Sources */,
+				20D1A0A622C4E8D800BE23AA /* WordStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D1A08B22C4E2C300BE23AA /* FallingWordsTests.swift in Sources */,
+				20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
