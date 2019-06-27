@@ -77,12 +77,10 @@
 		20D1A07422C4E2C100BE23AA /* FallingWords */ = {
 			isa = PBXGroup;
 			children = (
-				20D1A07522C4E2C100BE23AA /* AppDelegate.swift */,
-				20D1A07722C4E2C100BE23AA /* ViewController.swift */,
-				20D1A07922C4E2C100BE23AA /* Main.storyboard */,
-				20D1A07C22C4E2C300BE23AA /* Assets.xcassets */,
-				20D1A07E22C4E2C300BE23AA /* LaunchScreen.storyboard */,
-				20D1A08122C4E2C300BE23AA /* Info.plist */,
+				20D1A09C22C4E77000BE23AA /* Source */,
+				20D1A09D22C4E77A00BE23AA /* Storyboards */,
+				20D1A09F22C4E7AA00BE23AA /* Resources */,
+				20D1A09E22C4E79000BE23AA /* SupportingFiles */,
 			);
 			path = FallingWords;
 			sourceTree = "<group>";
@@ -94,6 +92,56 @@
 				20D1A08C22C4E2C300BE23AA /* Info.plist */,
 			);
 			path = FallingWordsTests;
+			sourceTree = "<group>";
+		};
+		20D1A09B22C4E75F00BE23AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A07722C4E2C100BE23AA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20D1A09C22C4E77000BE23AA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0A022C4E7D800BE23AA /* AppDelegate */,
+				20D1A09B22C4E75F00BE23AA /* ViewControllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		20D1A09D22C4E77A00BE23AA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A07922C4E2C100BE23AA /* Main.storyboard */,
+				20D1A07E22C4E2C300BE23AA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		20D1A09E22C4E79000BE23AA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A08122C4E2C300BE23AA /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		20D1A09F22C4E7AA00BE23AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A07C22C4E2C300BE23AA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20D1A0A022C4E7D800BE23AA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A07522C4E2C100BE23AA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FallingWords/Info.plist;
+				INFOPLIST_FILE = FallingWords/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FallingWords/Info.plist;
+				INFOPLIST_FILE = FallingWords/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
