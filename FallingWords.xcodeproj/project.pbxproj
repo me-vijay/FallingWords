@@ -18,6 +18,12 @@
 		20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */; };
 		20D1A0AC22C4EE3500BE23AA /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A0AB22C4EE3500BE23AA /* words.json */; };
 		20D1A0B022C4EE8100BE23AA /* test_words.json in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A0AF22C4EE8100BE23AA /* test_words.json */; };
+		20D1A0B322C4FEE500BE23AA /* GameMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0B222C4FEE500BE23AA /* GameMechanics.swift */; };
+		20D1A0B522C5008B00BE23AA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0B422C5008B00BE23AA /* Translation.swift */; };
+		20D1A0B822C503C600BE23AA /* EngToSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0B722C503C600BE23AA /* EngToSpan.swift */; };
+		20D1A0BA22C5408B00BE23AA /* FallingWordsMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0B922C5408B00BE23AA /* FallingWordsMechanics.swift */; };
+		20D1A0BD22C5603900BE23AA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0BC22C5603900BE23AA /* AppConstants.swift */; };
+		20D1A0C022C5664A00BE23AA /* FallingWordsMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0BF22C5664A00BE23AA /* FallingWordsMechanicsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStoreTests.swift; sourceTree = "<group>"; };
 		20D1A0AB22C4EE3500BE23AA /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		20D1A0AF22C4EE8100BE23AA /* test_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_words.json; sourceTree = "<group>"; };
+		20D1A0B222C4FEE500BE23AA /* GameMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanics.swift; sourceTree = "<group>"; };
+		20D1A0B422C5008B00BE23AA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Translation.swift; path = FallingWords/Source/Models/Translation/Translation.swift; sourceTree = SOURCE_ROOT; };
+		20D1A0B722C503C600BE23AA /* EngToSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngToSpan.swift; sourceTree = "<group>"; };
+		20D1A0B922C5408B00BE23AA /* FallingWordsMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsMechanics.swift; sourceTree = "<group>"; };
+		20D1A0BC22C5603900BE23AA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		20D1A0BF22C5664A00BE23AA /* FallingWordsMechanicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsMechanicsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 			children = (
 				20D1A0AA22C4ED9700BE23AA /* TestData */,
 				20D1A0A722C4ED1F00BE23AA /* WordStoreTests */,
+				20D1A0BE22C5662B00BE23AA /* FallingWordsMechanicsTest */,
 				20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */,
 				20D1A08C22C4E2C300BE23AA /* Info.plist */,
 			);
@@ -117,10 +130,12 @@
 		20D1A09C22C4E77000BE23AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				20D1A0BB22C5601E00BE23AA /* Constants */,
 				20D1A0A022C4E7D800BE23AA /* AppDelegate */,
 				20D1A0A222C4E85E00BE23AA /* Models */,
 				20D1A09B22C4E75F00BE23AA /* ViewControllers */,
 				20D1A0A122C4E84200BE23AA /* WordStore */,
+				20D1A0B122C4F94500BE23AA /* GameMechanics */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -170,6 +185,7 @@
 		20D1A0A222C4E85E00BE23AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				20D1A0B622C500B300BE23AA /* Translation */,
 				20D1A0A322C4E87400BE23AA /* Word.swift */,
 			);
 			path = Models;
@@ -189,6 +205,40 @@
 				20D1A0AF22C4EE8100BE23AA /* test_words.json */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		20D1A0B122C4F94500BE23AA /* GameMechanics */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0B222C4FEE500BE23AA /* GameMechanics.swift */,
+				20D1A0B922C5408B00BE23AA /* FallingWordsMechanics.swift */,
+			);
+			path = GameMechanics;
+			sourceTree = "<group>";
+		};
+		20D1A0B622C500B300BE23AA /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0B422C5008B00BE23AA /* Translation.swift */,
+				20D1A0B722C503C600BE23AA /* EngToSpan.swift */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		20D1A0BB22C5601E00BE23AA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0BC22C5603900BE23AA /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		20D1A0BE22C5662B00BE23AA /* FallingWordsMechanicsTest */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A0BF22C5664A00BE23AA /* FallingWordsMechanicsTests.swift */,
+			);
+			path = FallingWordsMechanicsTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D1A0B322C4FEE500BE23AA /* GameMechanics.swift in Sources */,
+				20D1A0BD22C5603900BE23AA /* AppConstants.swift in Sources */,
 				20D1A07822C4E2C100BE23AA /* ViewController.swift in Sources */,
 				20D1A07622C4E2C100BE23AA /* AppDelegate.swift in Sources */,
 				20D1A0A422C4E87400BE23AA /* Word.swift in Sources */,
 				20D1A0A622C4E8D800BE23AA /* WordStore.swift in Sources */,
+				20D1A0BA22C5408B00BE23AA /* FallingWordsMechanics.swift in Sources */,
+				20D1A0B522C5008B00BE23AA /* Translation.swift in Sources */,
+				20D1A0B822C503C600BE23AA /* EngToSpan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D1A08B22C4E2C300BE23AA /* FallingWordsTests.swift in Sources */,
+				20D1A0C022C5664A00BE23AA /* FallingWordsMechanicsTests.swift in Sources */,
 				20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

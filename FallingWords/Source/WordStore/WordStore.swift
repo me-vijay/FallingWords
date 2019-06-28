@@ -40,7 +40,5 @@ class WordStore {
         
         //create Word array from json data
         words = try decoder.decode([Word].self, from: jsonData)
-        
-        print(words)
     }
 }

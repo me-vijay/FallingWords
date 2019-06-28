@@ -14,7 +14,7 @@ class WordStoreTests: XCTestCase {
     /// method to get test words
     ///
     /// - Returns: array of type Word
-    private func testWords(file: String) throws -> [Word] {
+    private func getTestWords(file: String) throws -> [Word] {
         //read file in String
         let jsonString = try String.init(contentsOfFile: file)
         
@@ -36,18 +36,15 @@ class WordStoreTests: XCTestCase {
         let filePath = bundle.path(forResource: "test_words", ofType: "json")
         
         //read using our own method from test file
-        let ourTestWords = try! self.testWords(file: filePath!)
+        let ourTestWords = try! self.getTestWords(file: filePath!)
         
         //set wordstore using same file
-        let wordstore = try! WordStore(jsonFileAt: filePath!)
+        let wordStore = try! WordStore(jsonFileAt: filePath!)
         
-        //test word count
-        XCTAssertEqual(wordstore.words.count, ourTestWords.count, "WordStore word count is invalid")
+        //test the word count
+        XCTAssertEqual(wordStore.words.count, ourTestWords.count, "WordStore word count is invalid")
         
-        //generate a random index, to test word similarity
-        let randomIndex = Int.random(in: 0..<ourTestWords.count)
-        
-        //words at same index should be same
-        XCTAssertEqual(wordstore.words[randomIndex], ourTestWords[randomIndex], "WordStore words are not correct ")
+        //words should be same
+        XCTAssertEqual(wordStore.words, ourTestWords, "WordStore words are not correct ")
     }
 }
