@@ -10,7 +10,7 @@ import XCTest
 @testable import FallingWords
 class FallingWordsMechanicsTests: XCTestCase {
     var ourTestWords: [Word]?
-    var fallingWordsMechanics: FallingWordsMechanics?
+    var fallingWordsMechanics: FallingWordsMechanics<EngToSpan>?
     
     override func setUp() {
         //file path of test words
@@ -60,7 +60,8 @@ class FallingWordsMechanicsTests: XCTestCase {
             let ourTanslation = EngToSpan(word: word)
             
             //call method being tested
-            let nextTranslation = fallingWordsMechanics!.nextTranslation().0
+            //We force downcast because we specified EngToSpan type of translation while declaring property
+            let nextTranslation = fallingWordsMechanics!.nextTranslation().0 as! EngToSpan
             
             //next translation should be same as our translation
             XCTAssertEqual(nextTranslation, ourTanslation, "next translation is not correct")

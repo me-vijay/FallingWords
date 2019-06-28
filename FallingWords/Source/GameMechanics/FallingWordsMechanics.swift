@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FallingWordsMechanics: GameMechanics {
+struct FallingWordsMechanics<T: Translation>: GameMechanics {
     /// array of words
     private (set) var words: [Word]
 
@@ -32,14 +32,15 @@ struct FallingWordsMechanics: GameMechanics {
     /// method to get next word-translation
     ///
     /// - Returns: tuple of next translation and the answer(correct/wrong) to be shown
-    mutating func nextTranslation() -> (EngToSpan, String) {
+    mutating func nextTranslation() -> (Translation, String) {
         //check for word index to be within words count
         if currentWordIndex < 0 || currentWordIndex >= words.count {
             //out of bounds, set to 0
             currentWordIndex = 0
         }
+        
         //create translation from next word
-        let translation = EngToSpan(word: words[currentWordIndex])
+        let translation = T(word: words[currentWordIndex])
         
         //get answer to show
         let answer = answerToShowForWord(at: currentWordIndex)

@@ -9,7 +9,6 @@
 import Foundation
 
 protocol GameMechanics {
-    associatedtype TranslationType: Translation
     
     /// initializer
     ///
@@ -20,5 +19,5 @@ protocol GameMechanics {
     /// method to get next word-translation
     ///
     /// - Returns: tuple of next translation and the answer(correct/wrong) to be shown
-    mutating func nextTranslation() -> (TranslationType, String)
+    mutating func nextTranslation() -> (Translation, String)
 }
