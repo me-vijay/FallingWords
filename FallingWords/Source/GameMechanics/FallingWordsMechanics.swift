@@ -11,8 +11,11 @@ import Foundation
 struct FallingWordsMechanics<T: Translation>: GameMechanics {
     /// array of words
     private (set) var words: [Word]
-
-    ///   - maxConsecutiveWrongAns: matching answer is presented with reasonable probability. This is the number of max wrong answers that can be presented in a row. By default probability is 2.
+    
+    /// boolean to identify if all words have been shown in game
+    private (set) var wordsFinished: Bool
+    
+    /// matching answer is presented with reasonable probability. This is the number of max wrong answers that can be presented in a row. By default probability is 2.
     var maxConsecutiveWrongAns: Int = AppConstants.matchingProbability
     
     /// index of current word
@@ -21,12 +24,18 @@ struct FallingWordsMechanics<T: Translation>: GameMechanics {
     /// count to track wrong words shown
     private var wrongCount = 0
     
-    /// initializer
+    /// failable initializer. Fails when words list is empty
     ///
     /// - Parameter words: array of words
-    init(words: [Word]) {
+    init?(words: [Word]) {
+        // if words is empty, nil is returned
+        guard !words.isEmpty else { return nil }
+        
         //set words
         self.words = words
+        
+        // words are yet to be shown in game
+        wordsFinished = false
     }
 
     /// method to get next word-translation
@@ -34,8 +43,11 @@ struct FallingWordsMechanics<T: Translation>: GameMechanics {
     /// - Returns: tuple of next translation and the answer(correct/wrong) to be shown
     mutating func nextTranslation() -> (Translation, String) {
         //check for word index to be within words count
-        if currentWordIndex < 0 || currentWordIndex >= words.count {
-            //out of bounds, set to 0
+        if currentWordIndex >= words.count {
+            // all words have been presented
+            wordsFinished = true
+            
+            //restart from first word
             currentWordIndex = 0
         }
         
