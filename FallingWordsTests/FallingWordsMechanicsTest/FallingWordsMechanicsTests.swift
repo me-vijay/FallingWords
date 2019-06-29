@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import FallingWords
+
 class FallingWordsMechanicsTests: XCTestCase {
     var ourTestWords: [Word]?
     var fallingWordsMechanics: FallingWordsMechanics<EngToSpan>?
@@ -18,7 +19,7 @@ class FallingWordsMechanicsTests: XCTestCase {
         let filePath = bundle.path(forResource: "test_words", ofType: "json")
         
         //read using our own method from test file
-         ourTestWords = try! self.getTestWords(file: filePath!)
+         ourTestWords = try! WordStore.getWords(file: filePath!)
         
         //create falling word mechanics
         fallingWordsMechanics = FallingWordsMechanics(words: ourTestWords!)
@@ -27,22 +28,6 @@ class FallingWordsMechanicsTests: XCTestCase {
     override func tearDown() {
         ourTestWords = nil
         fallingWordsMechanics = nil
-    }
-    
-    private func getTestWords(file: String) throws -> [Word] {
-        //read file in String
-        let jsonString = try String.init(contentsOfFile: file)
-        
-        //convert String to Data
-        let jsonData = jsonString.data(using: .utf8)
-        
-        //create json decoder
-        let decoder = JSONDecoder()
-        
-        //create Word array from json data
-        let words = try decoder.decode([Word].self, from: jsonData!)
-        
-        return words
     }
     
     func test_Init_SetsCorrectWords() {
