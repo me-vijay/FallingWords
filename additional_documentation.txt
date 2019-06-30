@@ -1,0 +1,19 @@
+Time Invested:
+I worked in different chunks of time. Total time invested is around 8 hours.
+
+Time Distribution:
+1. Creating word store from json file: 1 hour
+2. Implemeting Game Mechanics: 2.5 hour
+3. Implementing ViewModel layer: 2 hours
+4. Implementing ViewController: 3 hours
+
+Decisions:
+1. used Timer to make translation fall from top of screen
+2. correct/matching translation presented with probability of 2, i.e. after every two wrong translations, 3rd one will be matching one
+2. each right answer will increase score by 1
+3. each wrong/missed will decrease lifeline by 1 (max 5 lifelines)
+4. countdown timer indicates remaining time for giving an answer
+
+
+First Thing to Improve:
+User experience of the game including countdown timer, right/wrong answer feedback
