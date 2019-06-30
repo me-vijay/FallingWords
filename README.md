@@ -8,7 +8,7 @@ A small language game. The player will see a word in English on the screen. Whil
 - Min iOS Deployment Target 10.0
 
 ## Demo
-![](Demo.gif)
+![](https://github.com/me-vijay/FallingWords/blob/master/demo.gif)
 
 
 ## Technical Notes
