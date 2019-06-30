@@ -18,9 +18,11 @@ The app is follows architectural pattern MVVM along with separate layer for Game
 
 
 ### Code Coverage
-- Test cases for ViewModels
-- Test cases for Game Mechanics Layer
-
+Overall code coverage is 93%. Includes test cases for
+- Storage layer
+- Game Mechanics Layer
+- ViewModels
+- View Controller
 
 ## Versioning
 
