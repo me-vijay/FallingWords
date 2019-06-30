@@ -17,4 +17,7 @@ enum AppConstants {
     
     /// count of user lifelines
     public static var lifelineCount = 5
+    
+    /// score per each right answer
+    public static var scorePerRightAnswer = 1
 }

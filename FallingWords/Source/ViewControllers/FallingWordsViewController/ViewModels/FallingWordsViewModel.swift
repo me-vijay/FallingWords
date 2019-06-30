@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct FallingWordsViewModel {
+struct FallingWordsViewModel: FallingWordsViewModelProtocol {
     
     /// game mechanics to get the translations
-    private var gameMechanics: GameMechanics
+    private(set) var gameMechanics: GameMechanics
+    
     
     /// current word-translation. Nil when game not started or game over
     private(set) var currentWordAndTranslation: (Translation, String)? {
@@ -23,19 +24,18 @@ struct FallingWordsViewModel {
     }
    
     /// lifelines of user. Default value is as set in AppConstants
-    private(set) var lifelines = AppConstants.lifelineCount {
+    var lifelines = AppConstants.lifelineCount {
         didSet {
-            // if lifelines ended
+            // update lifelines on view
+            onLifelinesChange?(lifelines)
+
+            // if all lifelines used
             if lifelines <= 0 {
                 // set current word-translation to nil
                 currentWordAndTranslation = nil
                 
                 //game is over
                 onGameOver?()
-            }
-            else {
-                // update lifelines on view
-                onLifelinesChange?(lifelines)
             }
         }
     }
@@ -96,7 +96,7 @@ struct FallingWordsViewModel {
         setWordAndTranslation()
     }
     
-    /// method to be called on user selects an answer
+    /// method to process answer given by user
     ///
     /// - Parameter choice: Bool to represent user selected yes/right or no/wrong
     mutating func userAnswered(as choice: Bool) {
@@ -109,8 +109,7 @@ struct FallingWordsViewModel {
         if  isRightAnswer {
             // increment score on correct answer
             incrementScore()
-        }
-        else {
+        } else {
             //decrement lifeline on wrong score
             decrementLifeline()
         }
@@ -124,13 +123,13 @@ struct FallingWordsViewModel {
         // next word will be set if lifelines are not zero
         guard lifelines > 0 else { return }
         
-        // get next translation
-        currentWordAndTranslation = gameMechanics.nextTranslation()
-        
         // check if words are finished
         if gameMechanics.wordsFinished == true {
             //call game completion block
             onGameCompletion?()
+        } else {
+            // get next translation
+            currentWordAndTranslation = gameMechanics.nextTranslation()
         }
     }
 
@@ -157,7 +156,7 @@ struct FallingWordsViewModel {
     
     /// method to increment score
     private mutating func incrementScore() {
-        score = score + 5
+        score = score + AppConstants.scorePerRightAnswer
     }
     
     // method to decrement lifeline

@@ -10,12 +10,13 @@
 		20CC8DC422C60B0800F4AC27 /* FallingWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC8DC322C60B0800F4AC27 /* FallingWordsViewModel.swift */; };
 		20CC8DC722C6756200F4AC27 /* FallingWordsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC8DC622C6756200F4AC27 /* FallingWordsViewModelTests.swift */; };
 		20CC8DCA22C76D7400F4AC27 /* WordStore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC8DC922C76D7400F4AC27 /* WordStore+Extension.swift */; };
+		20CC8DD022C8B08300F4AC27 /* FallingWordsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC8DCF22C8B08300F4AC27 /* FallingWordsViewModelProtocol.swift */; };
 		20D1A07622C4E2C100BE23AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A07522C4E2C100BE23AA /* AppDelegate.swift */; };
 		20D1A07822C4E2C100BE23AA /* FallingWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A07722C4E2C100BE23AA /* FallingWordsViewController.swift */; };
 		20D1A07B22C4E2C100BE23AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A07922C4E2C100BE23AA /* Main.storyboard */; };
 		20D1A07D22C4E2C300BE23AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A07C22C4E2C300BE23AA /* Assets.xcassets */; };
 		20D1A08022C4E2C300BE23AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D1A07E22C4E2C300BE23AA /* LaunchScreen.storyboard */; };
-		20D1A08B22C4E2C300BE23AA /* FallingWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */; };
+		20D1A08B22C4E2C300BE23AA /* FallingWordsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A08A22C4E2C300BE23AA /* FallingWordsViewControllerTests.swift */; };
 		20D1A0A422C4E87400BE23AA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A322C4E87400BE23AA /* Word.swift */; };
 		20D1A0A622C4E8D800BE23AA /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A522C4E8D800BE23AA /* WordStore.swift */; };
 		20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1A0A822C4ED3A00BE23AA /* WordStoreTests.swift */; };
@@ -43,6 +44,7 @@
 		20CC8DC322C60B0800F4AC27 /* FallingWordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsViewModel.swift; sourceTree = "<group>"; };
 		20CC8DC622C6756200F4AC27 /* FallingWordsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsViewModelTests.swift; sourceTree = "<group>"; };
 		20CC8DC922C76D7400F4AC27 /* WordStore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordStore+Extension.swift"; sourceTree = "<group>"; };
+		20CC8DCF22C8B08300F4AC27 /* FallingWordsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsViewModelProtocol.swift; sourceTree = "<group>"; };
 		20D1A07222C4E2C100BE23AA /* FallingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D1A07522C4E2C100BE23AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D1A07722C4E2C100BE23AA /* FallingWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		20D1A07F22C4E2C300BE23AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20D1A08122C4E2C300BE23AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D1A08622C4E2C300BE23AA /* FallingWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FallingWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsTests.swift; sourceTree = "<group>"; };
+		20D1A08A22C4E2C300BE23AA /* FallingWordsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingWordsViewControllerTests.swift; sourceTree = "<group>"; };
 		20D1A08C22C4E2C300BE23AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D1A0A322C4E87400BE23AA /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		20D1A0A522C4E8D800BE23AA /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		20CC8DC122C60AC300F4AC27 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				20CC8DCF22C8B08300F4AC27 /* FallingWordsViewModelProtocol.swift */,
 				20CC8DC322C60B0800F4AC27 /* FallingWordsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -115,6 +118,14 @@
 				20CC8DC922C76D7400F4AC27 /* WordStore+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20CC8DCC22C8748C00F4AC27 /* FallingWordsViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				20D1A08A22C4E2C300BE23AA /* FallingWordsViewControllerTests.swift */,
+			);
+			path = FallingWordsViewControllerTests;
 			sourceTree = "<group>";
 		};
 		20D1A06922C4E2C100BE23AA = {
@@ -154,7 +165,7 @@
 				20D1A0A722C4ED1F00BE23AA /* WordStoreTests */,
 				20D1A0BE22C5662B00BE23AA /* FallingWordsMechanicsTest */,
 				20CC8DC522C6753500F4AC27 /* FallingWordsViewModelTests */,
-				20D1A08A22C4E2C300BE23AA /* FallingWordsTests.swift */,
+				20CC8DCC22C8748C00F4AC27 /* FallingWordsViewControllerTests */,
 				20D1A08C22C4E2C300BE23AA /* Info.plist */,
 			);
 			path = FallingWordsTests;
@@ -388,6 +399,7 @@
 				20D1A0B322C4FEE500BE23AA /* GameMechanics.swift in Sources */,
 				20D1A0BD22C5603900BE23AA /* AppConstants.swift in Sources */,
 				20CC8DC422C60B0800F4AC27 /* FallingWordsViewModel.swift in Sources */,
+				20CC8DD022C8B08300F4AC27 /* FallingWordsViewModelProtocol.swift in Sources */,
 				20D1A07822C4E2C100BE23AA /* FallingWordsViewController.swift in Sources */,
 				20D1A07622C4E2C100BE23AA /* AppDelegate.swift in Sources */,
 				20D1A0A422C4E87400BE23AA /* Word.swift in Sources */,
@@ -403,7 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20CC8DC722C6756200F4AC27 /* FallingWordsViewModelTests.swift in Sources */,
-				20D1A08B22C4E2C300BE23AA /* FallingWordsTests.swift in Sources */,
+				20D1A08B22C4E2C300BE23AA /* FallingWordsViewControllerTests.swift in Sources */,
 				20D1A0C022C5664A00BE23AA /* FallingWordsMechanicsTests.swift in Sources */,
 				20CC8DCA22C76D7400F4AC27 /* WordStore+Extension.swift in Sources */,
 				20D1A0A922C4ED3A00BE23AA /* WordStoreTests.swift in Sources */,

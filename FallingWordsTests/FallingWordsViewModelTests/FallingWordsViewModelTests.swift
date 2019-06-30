@@ -46,7 +46,7 @@ class FallingWordsViewModelTests: XCTestCase {
 
     func test_WordReachedBottom_DecrementsLifelines() {
         let previousLifelines =  viewModel.lifelines
-        var expectedLifelines: Int = 0
+        var expectedLifelines = 0
         let expectation = XCTestExpectation(description: "LifelinesBlock")
         
         viewModel.onLifelinesChange = { (remainingLifelines) in
@@ -61,7 +61,7 @@ class FallingWordsViewModelTests: XCTestCase {
     }
     
     func test_WordReachedBottom_ShowsNextWord() {
-        let expectation = XCTestExpectation(description: "LifelinesBlock")
+        let expectation = XCTestExpectation(description: "showWordTranslationBlock")
         var blockWasCalled = false
         
         XCTAssertTrue(viewModel.lifelines > 0, "Lifelines should be present before proceeding")
@@ -75,6 +75,27 @@ class FallingWordsViewModelTests: XCTestCase {
         
         wait(for: [expectation], timeout: 2)
         XCTAssertTrue(blockWasCalled, "New word should show after a word is missed")
+    }
+    
+    func test_LifelineChangeBlockGetsCalled_WhenBecomesZero() {
+        let totalLifelines =  viewModel.lifelines
+        var expectedLifelines = -1
+        let expectation = XCTestExpectation(description: "LastLifelineBlock")
+        
+        viewModel.onLifelinesChange = { (remainingLifelines) in
+            expectedLifelines = remainingLifelines
+            if remainingLifelines == 0 {
+                expectation.fulfill()
+            }
+        }
+        
+        // consume all lifelines
+        for _ in 1...totalLifelines {
+            viewModel.wordReachedBottom()
+        }
+        
+        wait(for: [expectation], timeout: 2)
+        XCTAssertEqual(expectedLifelines, 0, "onLifelinesChange block was not called on zero lifeline")
     }
     
     func test_UserAnswered_RightAnswerIncrementsScore() {
